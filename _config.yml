@@ -6,7 +6,6 @@ url: http://yoursite.com
 title: My Octopress Blog
 subtitle: A blogging framework for hackers.
 author: Your Name
-simple_search: http://google.com/search
 description:
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
@@ -34,11 +33,6 @@ plugins: plugins
 code_dir: downloads/code
 category_dir: blog/categories
 markdown: rdiscount
-rdiscount:
-  extensions:
-    - autolink
-    - footnotes
-    - smart
 pygments: false # default python pygments have been replaced by pygments.rb
 
 paginate: 10          # Posts per page on the blog index
@@ -98,3 +92,22 @@ google_analytics_tracking_id:
 
 # Facebook Like
 facebook_like: false
+
+# Plugin: jekyll-assets
+assets:
+  dirname: assets
+  baseurl: http://localhost:4000/assets/
+  sources:
+    - _assets/images
+    - _assets/javascripts
+    - _assets/jwplayer
+    - _assets/stylesheets
+  compress:
+    js:   'none'
+    css:  'yui'
+  cachebust: hard
+  gzip: [ text/css, application/javascript ]
+	
+#lunr-search
+lunr-search: true
+simple_search: #http://google.com/search
