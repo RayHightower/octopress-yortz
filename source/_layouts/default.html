@@ -4,8 +4,8 @@
   <header role="banner">{% include header.html %}</header>
   <nav role="navigation">{% include navigation.html %}</nav>
   <div id="main">
-		{% include custom/lunr-search/entries.html %}
     <div id="content">
+			{% include custom/lunr-search/entries.html %}
       {{ content | expand_urls: root_url }}
     </div>
   </div>
