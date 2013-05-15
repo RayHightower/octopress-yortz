@@ -1,8 +1,8 @@
 @mixin mask-image($img, $repeat: no-repeat){
-  @include experimental(mask-image, image-url($img), -webkit, -moz, -o, -ms);
+  @include experimental(mask-image, image-url("{% asset_path #{$img} %}", false, false), -webkit, -moz, -o, -ms);
   @include experimental(mask-repeat, $repeat, -webkit, -moz, -o, -ms);
-  width: image-width($img);
-  height: image-height($img);
+//  width: image-width($img);
+//  height: image-height($img);
 }
 
 @mixin shadow-box($border: #fff .5em solid, $shadow: rgba(#000, .15) 0 1px 4px, $border-radius: .3em) {
