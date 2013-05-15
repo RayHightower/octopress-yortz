@@ -44,7 +44,7 @@ module Jekyll
     end
 
     def search_pages(site)
-      site.pages.each_with_index do |page|
+      site.pages.each_with_index do |page, i|
         if page.data["title"]
           unless EXCLUDE.include? page.data["title"]
             @search_array << {
@@ -52,7 +52,7 @@ module Jekyll
             title: page.data["title"],
             url: page.url,
             content: page.content
-            }
+            } unless page.url == "/index.html"
           end
         end
       end
