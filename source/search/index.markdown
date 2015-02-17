@@ -4,5 +4,6 @@ title: Search
 footer: false
 ---
 
-Search starts here.
+This line is in `./source/search`. Where should it be instead? Or should
+it even exist?
 
